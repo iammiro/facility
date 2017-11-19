@@ -1,0 +1,185 @@
+/* fonts_____________________________________________________________________________________________________________ */
+@font-face {
+  font-family: "GothamProRegular";
+  src: url("../fonts/GothamProRegular/GothamProRegular.eot");
+  font-style: normal;
+  font-weight: normal; }
+
+@font-face {
+  font-family: "GothamProBold";
+  src: url("../fonts/GothamProBold/GothamProBold.eot");
+  font-style: normal;
+  font-weight: normal; }
+
+@font-face {
+  font-family: "GothamProBlack";
+  src: url("../fonts/GothamProBlack/GothamProBlack.eot");
+  font-style: normal;
+  font-weight: normal; }
+
+@font-face {
+  font-family: "GothamProItalic";
+  src: url("../fonts/GothamProItalic/GothamProItalic.eot");
+  font-style: normal;
+  font-weight: normal; }
+
+@font-face {
+  font-family: "GothamProMedium";
+  src: url("../fonts/GothamProMedium/GothamProMedium.eot");
+  font-style: normal;
+  font-weight: normal; }
+
+@font-face {
+  font-family: "GothamProLight";
+  src: url("../fonts/GothamProLight/GothamProLight.eot");
+  font-style: normal;
+  font-weight: normal; }
+
+@font-face {
+  font-family: "GothamProMediumItalic";
+  src: url("../fonts/GothamProMediumItalic/GothamProMediumItalic.eot");
+  font-style: normal;
+  font-weight: normal; }
+
+@font-face {
+  font-family: "GothamProLightItalic";
+  src: url("../fonts/GothamProLightItalic/GothamProLightItalic.eot");
+  font-style: normal;
+  font-weight: normal; }
+
+@font-face {
+  font-family: "GothamProBoldItalic";
+  src: url("../fonts/GothamProBoldItalic/GothamProBoldItalic.eot");
+  font-style: normal;
+  font-weight: normal; }
+
+@font-face {
+  font-family: "GothamProBlackItalic";
+  src: url("../fonts/GothamProBlackItalic/GothamProBlackItalic.eot");
+  font-style: normal;
+  font-weight: normal; }
+
+/* */
+/*common styles_______________________________________________________________________________________________________*/
+body {
+  font-family: "GothamProRegular", sans-serif;
+  color: #5a5a5a; }
+
+.column {
+  display: flex;
+  flex-direction: column; }
+
+.row {
+  display: flex;
+  flex-direction: row; }
+
+.center {
+  align-items: center;
+  justify-content: center; }
+
+.right {
+  align-items: flex-end;
+  justify-content: flex-end; }
+
+.left {
+  align-items: flex-start;
+  justify-content: flex-start; }
+
+/* */
+/*header______________________________________________________________________________________________________________*/
+/* */
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 30px 0 30px; }
+  header h2 {
+    color: #646464;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 50px;
+    text-transform: uppercase;
+    letter-spacing: 0.54px; }
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: row; }
+  nav ul a {
+    color: #646464;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 50px;
+    text-transform: uppercase;
+    letter-spacing: 0.42px;
+    text-decoration: none;
+    margin: 0 15px 0 15px; }
+    nav ul a:hover {
+      cursor: pointer;
+      color: #545ad8; }
+
+.logo {
+  width: 70px;
+  margin: 20px; }
+  .logo a {
+    text-decoration: none; }
+    .logo a:hover {
+      color: #646464; }
+
+/*sliders_____________________________________________________________________________________________________________*/
+.big-slider, .big-slider-wrapper {
+  height: 570px;
+  overflow: hidden; }
+
+#mini-slider {
+  width: 1000px; }
+
+.slick-prev, .slick-next {
+  z-index: 100;
+  left: 100px;
+  right: 100px;
+  background-color: black !important;
+  color: black !important; }
+
+/* */
+/*content_____________________________________________________________________________________________________________*/
+.items-wrapper {
+  width: 968px; }
+  .items-wrapper .row {
+    justify-content: space-between; }
+  .items-wrapper h3 {
+    justify-content: center !important; }
+
+.item {
+  width: 207px; }
+
+.article-wrapper {
+  width: 547px; }
+  .article-wrapper h2 {
+    color: #646464;
+    font-family: "GothamProRegular", sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.72px; }
+
+.article-wrapper h3, .article p {
+  width: 50%; }
+
+.article-wrapper h3 {
+  font-family: "GothamProRegular", sans-serif;
+  font-size: 16px;
+  line-height: 28px;
+  color: #646464;
+  font-weight: 700;
+  letter-spacing: 0.48px;
+  text-transform: uppercase; }
+  .article-wrapper h3 p {
+    font-weight: 400;
+    letter-spacing: 0.48px;
+    color: #5a5a5a; }
+  .article-wrapper h3 a:hover {
+    color: #878be4; }
+
+/* */
