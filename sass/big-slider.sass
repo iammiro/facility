@@ -1,0 +1,35 @@
+.big-slider, .big-slider-wrapper
+  height: 570px
+  overflow: hidden
+
+.big-slider
+  //& .slick-prev, .slick-next
+  //  z-index: 100
+  //  left: 100px
+  //  right: 100px
+  //  background-color: black !important
+  //  color: black !important
+.bid-slider-wrapper
+  & .pagination
+    position: relative
+    float: right
+    margin-bottom: 20px
+    li
+      margin-top: 20px
+      position: relative
+      float: left
+      margin-right: 20px
+      &.prev
+        //padding: 10px
+        //border: 1px solid black
+        //border-radius: 10px
+        display: block
+        height: 20px
+        width: 20px
+        background: url('../img/arrow.svg') no-repeat
+        transform: scaleX(-1)
+      &.next
+        display: block
+        height: 20px
+        width: 20px
+        background: url('../img/arrow.svg') no-repeat

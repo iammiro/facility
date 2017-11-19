@@ -1,7 +1,11 @@
 $(document).ready(function(){
-    $('.big-slider').slick();
+    $('.big-slider').slick({
+        prevArrow: $('.prev'),
+        nextArrow: $('.next')
+    });
 
-    $('.mini-slider').slick({
+
+    $('.little-slider').slick({
         infinite: true,
         slidesToShow: 3,
         slidesToScroll: 3
