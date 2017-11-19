@@ -1,0 +1,43 @@
+.little-slider-wrapper
+  display: flex
+  flex-direction: column
+  align-items: center
+  justify-content: center
+  & .row
+    width: 100%
+    display: flex
+    flex-direction: row
+    justify-content: space-around
+    align-items: center
+  & .little-slider
+    max-width: 968px
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+  & .prev-little
+    display: block
+    height: 30px
+    width: 30px
+    border: 1px solid black
+    border-radius: 50px
+    z-index: 100
+    padding: 10px
+    transform: scaleX(-1)
+    cursor: pointer
+  & .prev-little:hover
+    background-color: black
+  & .prev-little svg:hover
+    fill: white
+  & .next-little
+    display: block
+    height: 30px
+    width: 30px
+    border: 1px solid black
+    border-radius: 50px
+    z-index: 100
+    padding: 10px
+    cursor: pointer
+  & .next-little:hover
+    background-color: black
+  & .next-little svg:hover
+    fill: white

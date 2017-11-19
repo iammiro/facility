@@ -1,0 +1,80 @@
+.big-slider, .big-slider-wrapper
+  height: 570px
+  overflow: hidden
+
+.bid-slider-wrapper
+  position: relative
+  display: flex
+  flex-direction: row
+  align-items: center
+  justify-content: center
+  & .pagination
+    display: flex
+    flex-direction: row
+    align-items: center
+    justify-content: space-around
+    color: white
+    width: 100%
+    text-align: center
+    z-index: 10
+    position: absolute
+    & .prev
+      display: block
+      height: 50px
+      width: 50px
+      border: 1px solid white
+      border-radius: 50px
+      z-index: 100
+      padding: 10px
+      transform: scaleX(-1)
+      cursor: pointer
+    & .prev:hover
+      background-color: white
+    & .prev svg:hover
+      fill: black
+    & .next
+      display: block
+      height: 50px
+      width: 50px
+      border: 1px solid white
+      border-radius: 50px
+      z-index: 100
+      padding: 10px
+      cursor: pointer
+    & .next:hover
+      background-color: white
+    & .next svg:hover
+      fill: black
+    & .column
+      width: 50%
+      justify-content: space-around
+  & h1
+    color: #ffffff
+    font-family: "GothamProRegular", sans-serif
+    font-size: 75px
+    font-weight: 700
+    text-transform: uppercase
+    letter-spacing: 2.25px
+    margin: 0
+  & p
+    color: #ffffff
+    font-family: "GothamProRegular", sans-serif
+    font-size: 14px
+    font-weight: 400
+    line-height: 20px
+    text-transform: uppercase
+    letter-spacing: 0.42px
+  & button
+    width: 170px
+    height: 50px
+    border-radius: 20px
+    border: 1px solid #ffffff
+    background-color: #646464
+    color: #ffffff
+    font-family: "GothamProRegular", sans-serif
+    font-size: 16px
+    font-weight: 400
+    line-height: 20px
+    text-transform: uppercase
+    letter-spacing: 0.48px
+    cursor: pointer

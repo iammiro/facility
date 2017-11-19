@@ -9,7 +9,7 @@ gulp.task('deploy', function() {
         .pipe(ghPages());
 });
 
-gulp.task('serve', ['sass'], function () {
+gulp.task('serve', ['sass', 'html', 'js'], function () {
     browserSync.init({
         server: {
             baseDir: "./dist/"
@@ -17,7 +17,10 @@ gulp.task('serve', ['sass'], function () {
     });
 
     gulp.watch('src/sass/*.sass', ['sass']);
+    gulp.watch('src//*.html', ['html']);
+    gulp.watch('src/**/*.js', ['js']);
     gulp.watch('dist/**/*.*').on('change', browserSync.reload);
+    gulp.watch('dist/*.*').on('change', browserSync.reload);
 });
 
 gulp.task('sass', function () {
@@ -25,6 +28,16 @@ gulp.task('sass', function () {
         .pipe(concat('index.sass'))
         .pipe(sass().on('error', sass.logError))
         .pipe(gulp.dest('./dist/css'));
+});
+
+gulp.task('html', function () {
+    return gulp.src('src/*.html')
+        .pipe(gulp.dest('./dist/'))
+});
+
+gulp.task('js', function () {
+    return gulp.src('src/js/*.js')
+        .pipe(gulp.dest('./dist/js/'))
 });
 
 gulp.task('default', ['serve'], function() {
