@@ -2,34 +2,84 @@
   height: 570px
   overflow: hidden
 
-.big-slider
-  //& .slick-prev, .slick-next
-  //  z-index: 100
-  //  left: 100px
-  //  right: 100px
-  //  background-color: black !important
-  //  color: black !important
 .bid-slider-wrapper
+  position: relative
+  display: flex
+  flex-direction: row
+  align-items: center
+  justify-content: center
   & .pagination
-    position: relative
-    float: right
-    margin-bottom: 20px
-    li
-      margin-top: 20px
-      position: relative
-      float: left
-      margin-right: 20px
-      &.prev
-        //padding: 10px
-        //border: 1px solid black
-        //border-radius: 10px
-        display: block
-        height: 20px
-        width: 20px
-        background: url('../img/arrow.svg') no-repeat
-        transform: scaleX(-1)
-      &.next
-        display: block
-        height: 20px
-        width: 20px
-        background: url('../img/arrow.svg') no-repeat
+    display: flex
+    flex-direction: row
+    align-items: center
+    justify-content: space-around
+    color: white
+    width: 100%
+    text-align: center
+    z-index: 10
+    position: absolute
+    & .prev
+      display: block
+      height: 50px
+      width: 50px
+      border: 1px solid white
+      border-radius: 50px
+      z-index: 100
+      padding: 10px
+      transform: scaleX(-1)
+      cursor: pointer
+    & .prev:hover
+      background-color: white
+    & .prev svg:hover
+      fill: black
+    & .next
+      display: block
+      height: 50px
+      width: 50px
+      border: 1px solid white
+      border-radius: 50px
+      z-index: 100
+      padding: 10px
+      cursor: pointer
+    & .next:hover
+      background-color: white
+    & .next svg:hover
+      fill: black
+    & .column
+      width: 50%
+      justify-content: space-around
+  & h1
+    color: #ffffff
+    font-family: "GothamProRegular", sans-serif
+    font-size: 75px
+    font-weight: 700
+    text-transform: uppercase
+    letter-spacing: 2.25px
+    margin: 0
+    @include respond-to($phone)
+
+    @include respond-to($tablet-portrait)
+      font-size: 45px
+      letter-spacing: 1.35px
+  & p
+    color: #ffffff
+    font-family: "GothamProRegular", sans-serif
+    font-size: 14px
+    font-weight: 400
+    line-height: 20px
+    text-transform: uppercase
+    letter-spacing: 0.42px
+  & button
+    width: 170px
+    height: 50px
+    border-radius: 20px
+    border: 1px solid #ffffff
+    background-color: #646464
+    color: #ffffff
+    font-family: "GothamProRegular", sans-serif
+    font-size: 16px
+    font-weight: 400
+    line-height: 20px
+    text-transform: uppercase
+    letter-spacing: 0.48px
+    cursor: pointer

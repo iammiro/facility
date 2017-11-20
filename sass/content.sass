@@ -1,37 +1,45 @@
 .items-wrapper
-    width: 968px
-    & .row
-        justify-content: space-between
-    & h3
-        justify-content: center!important
+  width: 968px
+  & .row
+    justify-content: space-between
+  & h2
+    justify-content: center !important
 
 .item
-    width: 207px
+  width: 300px
+  letter-spacing: 1px
+  line-height: 20px
 
 .article-wrapper
-    width: 547px
-    & h2
-        color: #646464
-        font-family: "GothamProRegular", sans-serif
-        font-size: 24px
-        font-weight: 700
-        text-transform: uppercase
-        letter-spacing: 0.72px
+  width: 60%
+  & h2
+    color: #646464
+    font-family: "GothamProRegular", sans-serif
+    font-size: 24px
+    font-weight: 700
+    text-transform: uppercase
+    letter-spacing: 0.72px
 
-.article-wrapper h3, .article p
-    width: 50%
+.article-wrapper h3, .article-wrapper p
+  letter-spacing: 1px
+  line-height: 20px
 
 .article-wrapper h3
-    font-family: "GothamProRegular", sans-serif
-    font-size: 16px
-    line-height: 28px
-    color: #646464
-    font-weight: 700
+  font-family: "GothamProRegular", sans-serif
+  font-size: 16px
+  line-height: 28px
+  color: #646464
+  font-weight: 700
+  letter-spacing: 0.48px
+  text-transform: uppercase
+  @include respond-to($phone)
+
+  @include respond-to($tablet-portrait)
+    font-size: 14px
+    letter-spacing: 0.42px
+  & p
+    font-weight: 400
     letter-spacing: 0.48px
-    text-transform: uppercase
-    & p
-        font-weight: 400
-        letter-spacing: 0.48px
-        color: #5a5a5a
-    & a:hover
-        color: #878be4
+    color: #5a5a5a
+  & a:hover
+    color: #878be4
