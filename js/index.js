@@ -1,9 +1,5 @@
 $(document).ready(function () {
 
-    $(function () {
-        $('#menu').slicknav();
-    });
-
     $('.big-slider').slick({
         dots: true,
         prevArrow: $('.prev'),
@@ -40,12 +36,12 @@ $(document).ready(function () {
             }]
     });
 
-    $("#menu").on("click", "a", function (event) {
-        event.preventDefault();
-        let id = $(this).attr('href'),
-            top = $(id).offset().top;
-        $('body,html').animate({scrollTop: top}, 1500);
-    });
+    // $("#menu").on("click", "a", function (event) {
+    //     event.preventDefault();
+    //     let id = $(this).attr('href'),
+    //         top = $(id).offset().top;
+    //     $('body,html').animate({scrollTop: top}, 1500);
+    // });
 
     $('button#go').click(function (event) {
         event.preventDefault();
