@@ -62,4 +62,13 @@ $(document).ready(function () {
                 }
             );
     });
+
+    $('#mobile_menu_close').click(function () {
+        $('header')
+            .animate({opacity: 0, top: '45%'}, 200,
+                function () {
+                    $(this).css('display', 'none');
+                }
+            );
+    });
 });
