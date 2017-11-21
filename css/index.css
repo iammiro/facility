@@ -290,13 +290,33 @@ header {
   align-items: center;
   padding: 0 30px 0 30px;
   height: 80px; }
+  header .logo-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center; }
+    @media only screen and (min-device-width: 320px) and (max-width: 480px) {
+      header .logo-wrapper {
+        flex-direction: column; } }
   header #mobile_menu_close {
-    margin-top: 10px;
+    margin-top: 15px;
+    margin-left: 80%;
     display: none;
     cursor: pointer; }
     @media only screen and (min-device-width: 320px) and (max-width: 480px) {
       header #mobile_menu_close {
         display: block; } }
+  @media only screen and (min-width: 480px) and (max-width: 979px) {
+    header {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      z-index: 500;
+      background-color: white;
+      height: 20vh; } }
+  header ul {
+    padding: 0; }
   @media only screen and (min-device-width: 320px) and (max-width: 480px) {
     header {
       display: flex;
@@ -342,6 +362,12 @@ nav ul {
     nav ul a:hover {
       cursor: pointer;
       color: #545ad8; }
+  @media only screen and (min-device-width: 320px) and (max-width: 480px) {
+    nav ul li {
+      margin: 5px 0; } }
+  nav ul a {
+    font-size: 14px;
+    margin: 0 10px 0 10px; }
 
 @media only screen and (min-device-width: 320px) and (max-width: 480px) {
   #menu {
@@ -466,6 +492,9 @@ nav ul {
   flex-direction: row;
   justify-content: space-around;
   align-items: center; }
+  @media only screen and (min-device-width: 320px) and (max-width: 480px) {
+    .little-slider-wrapper .inner-little-slider-wrapper {
+      flex-direction: column; } }
 
 .little-slider-wrapper .little-slider {
   max-width: 968px;
@@ -490,6 +519,9 @@ nav ul {
   padding: 10px;
   transform: scaleX(-1);
   cursor: pointer; }
+  @media only screen and (min-device-width: 320px) and (max-width: 480px) {
+    .little-slider-wrapper .prev-little {
+      order: 1; } }
 
 .little-slider-wrapper .prev-little:hover {
   background-color: black; }
@@ -512,6 +544,10 @@ nav ul {
 
 .little-slider-wrapper .next-little svg:hover {
   fill: white; }
+
+.slick-slide, .slick-current, .slick-active {
+  display: flex !important;
+  flex-direction: column !important; }
 
 .items-wrapper {
   width: 968px; }
@@ -586,7 +622,6 @@ footer {
   width: 300px;
   height: 300px;
   border-radius: 5px;
-  border: 3px #000 solid;
   background: #fff;
   position: fixed;
   top: 45%;
@@ -600,6 +635,10 @@ footer {
   flex-direction: column;
   justify-content: space-around;
   align-items: center; }
+  @media only screen and (min-device-width: 320px) and (max-width: 480px) {
+    #modal_form {
+      border-radius: 0;
+      padding: 0; } }
   #modal_form h3 {
     color: #646464;
     font-family: "GothamProRegular", sans-serif;
@@ -616,6 +655,26 @@ footer {
     text-transform: uppercase;
     color: white;
     cursor: pointer; }
+  #modal_form form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+  #modal_form form input {
+    width: 290px;
+    height: 50px;
+    border-radius: 10px;
+    border: 1px solid #646464;
+    text-align: center;
+    margin-bottom: 15px; }
+  #modal_form form input::placeholder {
+    opacity: 0.5;
+    color: #000000;
+    font-family: "GothamProRegular", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0.48px; }
 
 #modal_form #modal_close {
   width: 21px;
