@@ -596,8 +596,7 @@ nav ul {
       .items-wrapper .item-wrapper {
         display: flex;
         flex-direction: row;
-        justify-content: space-around;
-        align-items: center;
+        justify-content: center;
         flex-wrap: wrap; } }
   .items-wrapper h2 {
     justify-content: center !important; }
