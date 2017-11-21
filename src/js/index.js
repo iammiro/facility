@@ -1,16 +1,39 @@
 $(document).ready(function () {
+
     $('.big-slider').slick({
+        dots: true,
         prevArrow: $('.prev'),
         nextArrow: $('.next'),
-        dots: true
     });
 
     $('.little-slider').slick({
-        infinite: true,
+        speed: 300,
         slidesToShow: 3,
         slidesToScroll: 1,
         prevArrow: $('.prev-little'),
-        nextArrow: $('.next-little')
+        nextArrow: $('.next-little'),
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 1,
+                }
+            },
+            {
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            }]
     });
 
     $("#menu").on("click", "a", function (event) {
@@ -30,12 +53,21 @@ $(document).ready(function () {
             });
     });
 
-    $('#modal_close, #overlay, #close').click(function () {
+    $('#modal_close, #overlay').click(function () {
         $('#modal_form')
             .animate({opacity: 0, top: '45%'}, 200,
                 function () {
                     $(this).css('display', 'none');
                     $('#overlay').fadeOut(400);
+                }
+            );
+    });
+
+    $('#mobile_menu_close').click(function () {
+        $('header')
+            .animate({opacity: 0, top: '45%'}, 200,
+                function () {
+                    $(this).css('display', 'none');
                 }
             );
     });

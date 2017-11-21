@@ -2,7 +2,6 @@
   width: 300px
   height: 300px
   border-radius: 5px
-  border: 3px #000 solid
   background: #fff
   position: fixed
   top: 45%
@@ -16,6 +15,12 @@
   flex-direction: column
   justify-content: space-around
   align-items: center
+  @include respond-to($tablet-portrait)
+
+  @include respond-to($phone)
+    border-radius: 0
+    //width: 100%
+    padding: 0
   & h3
     color: #646464
     font-family: "GothamProRegular", sans-serif
@@ -32,6 +37,23 @@
     text-transform: uppercase
     color: white
     cursor: pointer
+  & form
+    @include flex-column-center-center
+  & form input
+    width: 290px
+    height: 50px
+    border-radius: 10px
+    border: 1px solid #646464
+    text-align: center
+    margin-bottom: 15px
+  & form input::placeholder
+    opacity: 0.5
+    color: #000000
+    font-family: "GothamProRegular", sans-serif
+    font-size: 16px
+    font-weight: 400
+    line-height: 20px
+    letter-spacing: 0.48px
 
 #modal_form #modal_close
   width: 21px

@@ -1,0 +1,70 @@
+$phone: '(min-device-width: 320px) and (max-width: 480px)'
+$tablet-portrait: '(max-width: 1024px)'
+$tablet-landscape: '(min-width: 480px) and (max-width: 979px)'
+$large-desktop: '(min-width: 1200px)'
+$non-retina: 'screen and (-webkit-max-device-pixel-ratio: 1)'
+$retina: '(min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (-webkit-min-device-pixel-ratio: 1.5), (min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx)'
+
+@mixin respond-to($media)
+  @media only screen and #{$media}
+    @content
+
+@mixin flex-row-center-center
+  display: flex
+  flex-direction: row
+  justify-content: center
+  align-items: center
+
+@mixin flex-row-space-around-center
+  display: flex
+  flex-direction: row
+  justify-content: space-around
+  align-items: center
+
+@mixin flex-row-space-between-center
+  display: flex
+  flex-direction: row
+  justify-content: space-between
+  align-items: center
+
+@mixin flex-row-space-between-flex-start
+  display: flex
+  flex-direction: row
+  justify-content: flex-start
+  align-items: center
+
+@mixin flex-column-flex-start-center
+  display: flex
+  flex-direction: column
+  justify-content: flex-start
+  align-items: center
+
+@mixin flex-column-center-center
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+
+@mixin flex-column-space-around-flex-end
+  display: flex
+  flex-direction: column
+  justify-content: space-around
+  align-items: flex-end
+
+@mixin flex-column-space-around-center
+  display: flex
+  flex-direction: column
+  justify-content: space-around
+  align-items: center
+
+@mixin flex-column-space-between-center
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+  align-items: center
+
+@mixin flex-row-reverse-space-around-center
+  display: flex
+  flex-direction: row-reverse
+  justify-content: space-around
+  align-items: center

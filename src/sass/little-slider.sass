@@ -1,19 +1,33 @@
 .little-slider-wrapper
-  display: flex
-  flex-direction: column
-  align-items: center
-  justify-content: center
-  & .row
-    width: 100%
-    display: flex
-    flex-direction: row
-    justify-content: space-around
-    align-items: center
+  & .inner-little-slider-wrapper
+    @include flex-row-space-around-center
+    @include respond-to($phone)
+      flex-wrap: wrap
+    @include respond-to($tablet-landscape)
+      flex-wrap: wrap
   & .little-slider
     max-width: 968px
+    width: 70%
     display: flex
     flex-direction: row
     justify-content: space-between
+    @include respond-to($phone)
+      width: 100%
+      order: -1
+      margin-bottom: 20px
+
+    @include respond-to($tablet-landscape)
+      width: 100%
+      order: -1
+      margin-bottom: 20px
+    & div
+      display: flex
+      flex-direction: row
+
+      align-items: center
+    & img
+      width: 70%
+
   & .prev-little
     display: block
     height: 30px
@@ -24,6 +38,10 @@
     padding: 10px
     transform: scaleX(-1)
     cursor: pointer
+    @include respond-to($phone)
+      margin-left: 25%
+    @include respond-to($tablet-landscape)
+      margin-left: 30%
   & .prev-little:hover
     background-color: black
   & .prev-little svg:hover
@@ -37,7 +55,15 @@
     z-index: 100
     padding: 10px
     cursor: pointer
+    @include respond-to($phone)
+      margin-right: 25%
+    @include respond-to($tablet-landscape)
+      margin-right: 30%
   & .next-little:hover
     background-color: black
   & .next-little svg:hover
     fill: white
+
+.slick-slide, .slick-current, .slick-active
+  display: flex !important
+  flex-direction: column !important

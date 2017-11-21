@@ -1,17 +1,41 @@
 .items-wrapper
   width: 968px
-  & .row
+  & .item-wrapper
+    display: flex
+    flex-direction: row
     justify-content: space-between
-  & h3
+    align-items: flex-start
+
+    @include respond-to($tablet-portrait)
+      //@include flex-row-space-around-flex-start
+      display: flex
+      flex-direction: row
+      justify-content: center
+      flex-wrap: wrap
+
+      @include respond-to($phone)
+  & h2
     justify-content: center !important
+  @include respond-to($phone)
+
+  @include respond-to($tablet-portrait)
+    width: 100%
 
 .item
   width: 300px
   letter-spacing: 1px
   line-height: 20px
+  & p, h4
+    @include respond-to($phone)
+      padding-left: 10px
+    @include respond-to($tablet-portrait)
 
 .article-wrapper
   width: 60%
+  @include respond-to($phone)
+
+  @include respond-to($tablet-portrait)
+    width: 90%
   & h2
     color: #646464
     font-family: "GothamProRegular", sans-serif
@@ -19,6 +43,8 @@
     font-weight: 700
     text-transform: uppercase
     letter-spacing: 0.72px
+  & p
+    color: #000000
 
 .article-wrapper h3, .article-wrapper p
   letter-spacing: 1px
@@ -32,6 +58,11 @@
   font-weight: 700
   letter-spacing: 0.48px
   text-transform: uppercase
+  @include respond-to($phone)
+
+  @include respond-to($tablet-portrait)
+    font-size: 14px
+    letter-spacing: 0.42px
   & p
     font-weight: 400
     letter-spacing: 0.48px

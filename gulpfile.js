@@ -4,7 +4,7 @@ let sass = require('gulp-sass');
 let ghPages = require('gulp-gh-pages');
 let concat = require('gulp-concat');
 
-gulp.task('deploy', function() {
+gulp.task('deploy', function () {
     return gulp.src('./dist/**/*')
         .pipe(ghPages());
 });
@@ -24,7 +24,18 @@ gulp.task('serve', ['sass', 'html', 'js'], function () {
 });
 
 gulp.task('sass', function () {
-    return gulp.src('src/sass/*.sass')
+    return gulp.src([
+        'src/sass/normalize.sass',
+        'src/sass/mixin.sass',
+        'src/sass/fonts.sass',
+        'src/sass/common.sass',
+        'src/sass/header.sass',
+        'src/sass/big-slider.sass',
+        'src/sass/little-slider.sass',
+        'src/sass/content.sass',
+        'src/sass/footer.sass',
+        'src/sass/popup.sass',
+        'src/sass/slicknav.sass'])
         .pipe(concat('index.sass'))
         .pipe(sass().on('error', sass.logError))
         .pipe(gulp.dest('./dist/css'));
@@ -40,7 +51,7 @@ gulp.task('js', function () {
         .pipe(gulp.dest('./dist/js/'))
 });
 
-gulp.task('default', ['serve'], function() {
+gulp.task('default', ['serve'], function () {
     gulp.src("src/**/*.*")
         .pipe(gulp.dest('dist/'));
 });
