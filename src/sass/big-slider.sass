@@ -2,7 +2,11 @@
   height: 570px
   overflow: hidden
   & .slick-slide img
-    width: 1200px
+    width: 100%
+    @include respond-to($tablet-portrait)
+      width: 1200px
+    @include respond-to($phone)
+      width: 1200px
 
 .bid-slider-wrapper
   position: relative
