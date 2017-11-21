@@ -4,15 +4,9 @@
 
 .bid-slider-wrapper
   position: relative
-  display: flex
-  flex-direction: row
-  align-items: center
-  justify-content: center
+  @include flex-row-center-center
   & .pagination
-    display: flex
-    flex-direction: row
-    align-items: center
-    justify-content: space-around
+    @include flex-row-space-around-center
     color: white
     width: 100%
     text-align: center
@@ -28,6 +22,10 @@
       padding: 10px
       transform: scaleX(-1)
       cursor: pointer
+      @include respond-to($tablet-portrait)
+
+      @include respond-to($phone)
+        display: none!important
     & .prev:hover
       background-color: white
     & .prev svg:hover
@@ -41,6 +39,10 @@
       z-index: 100
       padding: 10px
       cursor: pointer
+      @include respond-to($tablet-portrait)
+
+      @include respond-to($phone)
+        display: none!important
     & .next:hover
       background-color: white
     & .next svg:hover
@@ -48,6 +50,10 @@
     & .column
       width: 50%
       justify-content: space-around
+      @include respond-to($tablet-portrait)
+
+      @include respond-to($phone)
+        width: 90%
   & h1
     color: #ffffff
     font-family: "GothamProRegular", sans-serif
@@ -56,11 +62,12 @@
     text-transform: uppercase
     letter-spacing: 2.25px
     margin: 0
-    @include respond-to($phone)
-
     @include respond-to($tablet-portrait)
       font-size: 45px
       letter-spacing: 1.35px
+    @include respond-to($phone)
+      font-size: 25px
+      letter-spacing: 0.75px
   & p
     color: #ffffff
     font-family: "GothamProRegular", sans-serif
@@ -69,6 +76,12 @@
     line-height: 20px
     text-transform: uppercase
     letter-spacing: 0.42px
+    @include respond-to($tablet-portrait)
+
+    @include respond-to($phone)
+      font-size: 12px
+      letter-spacing: 0.36px
+      margin: 20px 0
   & button
     width: 170px
     height: 50px
@@ -83,3 +96,15 @@
     text-transform: uppercase
     letter-spacing: 0.48px
     cursor: pointer
+
+.slick-dots
+  //background-color: antiquewhite
+  bottom: 25px
+  display: flex
+  flex-direction: row
+  justify-content: center
+  align-items: center
+  & li button:before
+    font-size: 15px
+    color: white
+    opacity: .7

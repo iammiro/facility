@@ -1,10 +1,30 @@
 header
-  display: flex
-  flex-direction: row
-  justify-content: space-between
-  align-items: center
+  @include flex-row-space-between-center
   padding: 0 30px 0 30px
   height: 80px
+  & .logo-wrapper
+    @include flex-row-center-center
+    @include respond-to($phone)
+      flex-direction: column
+  #mobile_menu_close
+    margin-top: 15px
+    margin-left: 80%
+    display: none
+    cursor: pointer
+    @include respond-to($phone)
+      display: block
+  @include respond-to($tablet-landscape)
+    @include flex-column-flex-start-center
+    z-index: 500
+    background-color: white
+    height: 20vh
+  & ul
+    padding: 0
+  @include respond-to($phone)
+    @include flex-column-flex-start-center
+    z-index: 500
+    background-color: white
+    height: 100vh
   & h2
     color: #646464
     font-size: 18px
@@ -12,11 +32,19 @@ header
     line-height: 50px
     text-transform: uppercase
     letter-spacing: 0.54px
+    @include respond-to($phone)
+      display: none
 
 nav ul
   list-style-type: none
   display: flex
   flex-direction: row
+
+  @include respond-to($phone)
+    padding-left: 0
+    @include flex-column-space-between-center
+    z-index: 500
+    background-color: white
   & a
     color: #646464
     font-size: 14px
@@ -29,11 +57,22 @@ nav ul
     &:hover
       cursor: pointer
       color: #545ad8
-
+  & li
+    @include respond-to($phone)
+      margin: 5px 0
+  @include respond-to($tablet-portrait)
+  & a
+    font-size: 14px
+    margin: 0 10px 0 10px
+#menu
+  @include respond-to($phone)
+    @include flex-column-center-center
 .logo
   width: 70px
   margin: 20px
+  @include respond-to($phone)
   & a
     text-decoration: none
     &:hover
       color: #646464
+  @include respond-to($tablet-portrait)
