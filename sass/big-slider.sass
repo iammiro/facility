@@ -1,6 +1,12 @@
 .big-slider, .big-slider-wrapper
   height: 570px
   overflow: hidden
+  & .slick-slide img
+    width: 100%
+    @include respond-to($tablet-portrait)
+      width: 1200px
+    @include respond-to($phone)
+      width: 1200px
 
 .bid-slider-wrapper
   position: relative
@@ -25,7 +31,7 @@
       @include respond-to($tablet-portrait)
 
       @include respond-to($phone)
-        display: none!important
+        display: none !important
     & .prev:hover
       background-color: white
     & .prev svg:hover
@@ -42,7 +48,7 @@
       @include respond-to($tablet-portrait)
 
       @include respond-to($phone)
-        display: none!important
+        display: none !important
     & .next:hover
       background-color: white
     & .next svg:hover
@@ -98,7 +104,6 @@
     cursor: pointer
 
 .slick-dots
-  //background-color: antiquewhite
   bottom: 25px
   display: flex
   flex-direction: row
